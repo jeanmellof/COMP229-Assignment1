@@ -42,5 +42,11 @@ app.get('/contact', function(req, res) {
 // active CSS link
 app.use('/public', express.static('public'));
 
+// Start Server
+var port = process.env.port || 3000;
+app.listen(port);
+
+/*
 app.listen(3000);
 console.log('3000 is the magic port');
+*/
