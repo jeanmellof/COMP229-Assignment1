@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "start": "node server.js"
-  },
   "name": "node-ejs",
   "main": "server.js",
   "dependencies": {
