@@ -1,17 +1,50 @@
-<nav class="navbar navbar-default" role="navigation">
-	<div class="container-fluid">
+<!-- 
+Page: Header
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/09/2020
+-->
+	
+	<!-- Navbar -->
+	
+	<nav class="navbar">
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span> 
+		</button>
+		<a class="navbar-brand" href="/" style="margin-left: 30px;">&nbsp;Jean M. de Freitas</a>
+	  </div>
+	  <div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav">
+		  <li><a href="/">HOME</a></li>
+		  <li><a href="/about">ABOUT</a></li>
+		  <li><a href="/projects">PROJECTS</a></li> 
+		  <li><a href="/services">SERVICES</a></li>
+		  <li><a href="/contact" style="padding-right: 30px;">CONTACT</a></li> 
+		</ul>
+	  </div>
+	</nav>
 
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/">Brand</a>
+	<!-- Static Page part -->
+
+	<div class="header__content text-center">
+		<span class="header__content__block">HELLO</span>
+		<h1 class="header__content__title">I'M JEAN M. DE FREITAS</h1>
+		<ul class="header__content__sub-title">
+		  <li>SOFTWARE DEVELOPER <span class="padding">&#45;</span></li>
+		  <li>WEB DEVELOPER</li>
+		</ul>
+		<a class="header__button" href="/contact#CT">Have a Project? Get in touch</a>
+
+		<!-- If to remove identification on home page -->
+
+		<div class="header__content__identification">
+			<%if (title != "Home") { %>
+				<%= title %>
+			<% } %>
 		</div>
 
-		<ul class="nav navbar-nav">
-			<li><a href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/projects">Projects</a></li>
-			<li><a href="/services">Services</a></li>
-			<li><a href="/contact">Contact</a></li>
-		</ul>
-	  
+	  </div>
 	</div>
-</nav>

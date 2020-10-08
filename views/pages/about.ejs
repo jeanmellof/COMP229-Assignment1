@@ -1,38 +1,82 @@
+<!-- 
+Page: About
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/09/2020
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Gets the head (tab title and CSS) -->
+
 <head>
 	<% title="About"; %>
 	<% include ../partials/head %>
 </head>
-<body class="container">
 
-	<header>
-		<% include ../partials/header %>
+<!-- Gets header (navbar and static page) -->
+
+<body>
+<div id="content-wrapper">
+  	<header class="header header--bg">
+    	<% include ../partials/header %>
+
+			<!-- About Description -->
+
+			<section class="about">
+				<div class="container about__container--narrow">
+				  <div class="page-section">
+					<h2 class="page-section__title">About me!</h2>
+					  <img class="page-section__title-style" src="public/assets/images/title-style.png" alt="">
+					  <p class="page-section__paragraph">Here you will know a little more about me! </p>
+						  
+						<!-- My Picture -->
+						  
+					    <div class="row gutters-80">
+						<div class="col-md-4">
+						  <div class="about__image">
+							<img src="public/assets/images/about-me-image.jpg" alt="">
+						  </div>
+						</div>
+
+						<!-- About me -->
+
+						<div class="col-md-8 about__content">
+						  <p class="about__description">Hello, my name is Jean!<br><br>
+							Born and raised in Brazil, more specifically in São Leopoldo. Since I was 14, I have been passionate about Technology and when I was 16 graduated in IT Technician. After that, I worked in some companies and also as a freelancer.<br><br>
+							When I was 19 I started studying Production Engineering and graduated 5 years after. I was recognized as the youngest graduate in Engineering by UNISINOS University. After working in the engineering field for 3 years I decided to move to Canada.<br><br>
+							Currently, I live in Toronto and I’m studying Software Engineering at Centennial College. My favorite hobby has always been playing video games and my last passion was becoming a PC hardware enthusiast.
+							</p>
+						  <div class="row row--margin-top">
+
+						    <!-- Resume Button -->
+
+						    <div class="row">
+							<div class="col-md-4">
+							  <a class="button button--colorful button--margin" href="public/assets/Jean Mello de Freitas - Resumé.pdf">My Resume!</a>
+							</div>
+							
+							<!-- Hire me Button -->
+
+							<div class="col-md-4">
+							  <a class="button button--colorful button--margin" href="/contact#CT">Hire me!</a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+				  </div>
+				</div>
+			</section>
 	</header>
 
-	<main>
-		<div class="row">
-			<div class="col-sm-12">
-			
-				<div class="jumbotron">
-					<h1>Portfolio</h1>
-					<p>Welcome to my life!</p>
-				</div>
-				
-			</div>
-			<div class="col-sm-12">
-				
-				<div class="well">
-					<h3>Look I'm About</h3>
-				</div>
+	<!-- Gets footer (Contacts, Social Media, and Copyright) -->
 
-			</div>
+	<footer class="footer footer--bg">
+    	<div class="container text-center">
+			<% include ../partials/footer %>
 		</div>
-	</main>
-
-	<footer>
-		<% include ../partials/footer %>
-	</footer>
-	
+  	</footer>
+</div>
 </body>
-</html>
+</html>  

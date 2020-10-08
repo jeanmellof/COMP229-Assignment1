@@ -1,38 +1,82 @@
+<!-- 
+Page: Projects
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/09/2020
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Gets the head (tab title and CSS) -->
+
 <head>
 	<% title="Projects"; %>
 	<% include ../partials/head %>
 </head>
-<body class="container">
 
-	<header>
-		<% include ../partials/header %>
+<!-- Gets header (navbar and static page) -->
+
+<body>
+<div id="content-wrapper">
+  	<header class="header header--bg">
+    	<% include ../partials/header %>
+		
+			<!-- Projects - Using services page as template and css -->
+
+			<!-- Projects Description -->
+
+			<section class="service">
+				<div class="container">
+				  <div class="page-section">
+					<h2 class="page-section__title">My Projects!</h2>
+					<img class="page-section__title-style" src="public/assets/images/title-style.png" alt="">
+					<p class="page-section__paragraph">Here you will find some of my projects. Take a look! </p>
+					<div class="row gutters-70">
+					  
+						<!-- Dell website "Box" part -->
+
+						<div class="col-md-4">
+						<div class="thumbnail text-center">
+						  <a href="http://studentweb.cencol.ca/jmellode/Assignment%2003/Assignment3.html" target="blank"><img src="public/assets/images/alien.png" alt=""></a>
+						  <a href="http://studentweb.cencol.ca/jmellode/Assignment%2003/Assignment3.html" target="blank"><h4 class="service__single-section__title">Dell Alienware Website</h4></a>
+						  <p class="service__single-section__paragraph">Dell Alienware advertising website developed in HTML. </p>
+						</div>
+						</div>
+						
+						<!-- Pikachu game "Box" part -->
+
+					    <div class="col-md-4">
+						<div class="thumbnail text-center">
+						  <a href="http://studentweb.cencol.ca/jmellode/comp125/assignment5/" target="blank"><img src="public/assets/images/pikachu.png" alt=""></a>
+						  <a href="http://studentweb.cencol.ca/jmellode/comp125/assignment5/" target="blank"><h4 class="service__single-section__title">Can you Catch Pikachu?</h4></a>
+						  <p class="service__single-section__paragraph">Get challenged by Pikachu in this game developed in JavaScript. </p>
+						</div>
+						</div>
+						
+						<!-- Real State Website "Box" part -->
+
+					    <div class="col-md-4">
+						<div class="thumbnail text-center">
+						  <a href="http://studentweb.cencol.ca/jmellode/Project/index.html" target="blank"><img src="public/assets/images/peak.png" alt=""></a>
+						  <a href="http://studentweb.cencol.ca/jmellode/Project/index.html" target="blank"><h4 class="service__single-section__title">Real State Website</h4></a>
+						  <p class="service__single-section__paragraph">Real State Agent Portfolio Website developed in HTML. </p>
+						</div>
+						</div>
+						
+					</div>
+				  </div>
+				</div>
+			</section>
 	</header>
 
-	<main>
-		<div class="row">
-			<div class="col-sm-12">
-			
-				<div class="jumbotron">
-					<h1>Portfolio</h1>
-					<p>Welcome to my life!</p>
-				</div>
-				
-			</div>
-			<div class="col-sm-12">
-				
-				<div class="well">
-					<h3>Look I'm Projects</h3>
-				</div>
+	<!-- Gets footer (Contacts, Social Media, and Copyright) -->
 
-			</div>
+	<footer class="footer footer--bg">
+    	<div class="container text-center">
+			<% include ../partials/footer %>
 		</div>
-	</main>
-
-	<footer>
-		<% include ../partials/footer %>
-	</footer>
-	
+  	</footer>
+</div>
 </body>
-</html>
+</html>  

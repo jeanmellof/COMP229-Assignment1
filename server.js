@@ -1,3 +1,10 @@
+/*
+Page: Server
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/09/2020
+*/
+
 // load the things we need
 var express = require('express');
 var app = express();
@@ -31,6 +38,9 @@ app.get('/services', function(req, res) {
 app.get('/contact', function(req, res) {
 	res.render('pages/contact');
 });
+
+// active CSS link
+app.use('/public', express.static('public'));
 
 app.listen(3000);
 console.log('3000 is the magic port');

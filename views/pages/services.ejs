@@ -1,38 +1,80 @@
+<!-- 
+Page: Services
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/09/2020
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Gets the head (tab title and CSS) -->
+
 <head>
 	<% title="Services"; %>
 	<% include ../partials/head %>
 </head>
-<body class="container">
 
-	<header>
-		<% include ../partials/header %>
+<!-- Gets header (navbar and static page) -->
+
+<body>
+<div id="content-wrapper">
+  	<header class="header header--bg">
+    	<% include ../partials/header %>
+
+			<!-- Services Description -->
+
+			<section class="service">
+				<div class="container">
+				  <div class="page-section">
+					<h2 class="page-section__title">My Services!</h2>
+					<img class="page-section__title-style" src="public/assets/images/title-style.png" alt="">
+					<p class="page-section__paragraph">Are you looking for Software Development or Web Development? <br>You came in the right place! Check out my services! </p>
+					<div class="row gutters-70">
+					  
+						<!-- Software Development "Box" part -->
+
+						<div class="col-md-4">
+						<div class="thumbnail text-center">
+						  <img src="public/assets/images/code.png" alt="">
+						  <h4 class="service__single-section__title">Software Development</h4>
+						  <p class="service__single-section__paragraph">Software Development in C#, Java and Python 3. </p>
+						</div>
+						</div>
+
+						<!-- Web Development "Box" part -->
+
+					    <div class="col-md-4">
+						<div class="thumbnail text-center">
+						  <img src="public/assets/images/website-design.png" alt="">
+						  <h4 class="service__single-section__title">Web Development</h4>
+						  <p class="service__single-section__paragraph">Web Development in HTML and JavaScript. </p>
+						</div>
+						</div>
+						
+						<!-- Client Support "Box" part -->
+
+					    <div class="col-md-4">
+						<div class="thumbnail text-center">
+						  <img src="public/assets/images/support.png" alt="">
+						  <h4 class="service__single-section__title">Client Support</h4>
+						  <p class="service__single-section__paragraph">Software and Hardware configurarion in person and by remote access. </p>
+						</div>
+						</div>
+
+					</div>
+				  </div>
+				</div>
+			</section>
 	</header>
 
-	<main>
-		<div class="row">
-			<div class="col-sm-12">
-			
-				<div class="jumbotron">
-					<h1>Portfolio</h1>
-					<p>Welcome to my life!</p>
-				</div>
-				
-			</div>
-			<div class="col-sm-12">
-				
-				<div class="well">
-					<h3>Look I'm Services</h3>
-				</div>
+	<!-- Gets footer (Contacts, Social Media, and Copyright) -->
 
-			</div>
+	<footer class="footer footer--bg">
+    	<div class="container text-center">
+			<% include ../partials/footer %>
 		</div>
-	</main>
-
-	<footer>
-		<% include ../partials/footer %>
-	</footer>
-	
+  	</footer>
+</div>
 </body>
-</html>
+</html>  

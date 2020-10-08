@@ -1,30 +1,82 @@
+<!-- 
+Page: Contact
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/09/2020
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Gets the head (tab title and CSS) -->
+
 <head>
 	<% title="Contact"; %>
 	<% include ../partials/head %>
 </head>
-<body class="container">
 
-	<header>
-		<% include ../partials/header %>
-	</header>
+<!-- Gets header (navbar and static page) -->
 
-	<main>
-		<div class="row">
-			<div class="col-sm-12">
-				
-				<div class="well">
-					<h3>Look I'm Contact!</h3>
+<body>
+<div id="content-wrapper">
+  	<header class="header header--bg">
+    	<% include ../partials/header %>
+
+			<!-- Contact Description -->
+
+			<div class="container">
+			  <div class="page-section">
+				<h2 id="CT" class="page-section__title">Get in touch, now!</h2>
+				<img class="page-section__title-style" src="public/assets/images/title-style.png" alt="">
+				<p class="page-section__paragraph">Do you have an idea? Have a project? <br>You can use the form below to get in touch! I will be waiting for you!</p>
+			  </div>
+			</div>
+
+		<!-- Form to get in touch with me! -->
+
+		<div class="form">
+			<form action="mailto:jeanmf@live.com" method="post">
+
+				<div class="form_content">
+					<label class="form__label">First Name:</label><br>
+					<input class="form__input" name="txtFirstName" size="69" tabindex="1" type="text" required="required" placeholder="Bill">
 				</div>
 
-			</div>
-		</div>
-	</main>
+				<div class="form_content">
+					<label class="form__label">Last Name:</label><br>
+					<input class="form__input" name="txtLastName" size="69" tabindex="3" type="text" required="required" placeholder="Gates">
+				</div>
+				
+				<div class="form_content">
+					<label class="form__label">Phone Number:</label><br>
+					<input class="form__input" name="txtPhone" size="69" tabindex="5" type="phone" required="required" placeholder="(416) 123-4567">
+				</div>
 
-	<footer>
-		<% include ../partials/footer %>
-	</footer>
-	
+				<div class="form_content">
+					<label class="form__label">Email Address:</label><br>
+					<input class="form__input" name="txtEmail" size="69" tabindex="7" type="email" required="required" placeholder="example@domain.ca">
+				</div>
+
+				<div class="form_content">
+					<label class="form__label">Message:</label><br>
+					<textarea class="form__input" cols="71" name="txtSpecialReq" rows="10" tabindex="9"></textarea>
+				</div>
+
+				<div class="form__button">
+					<input class="buttonsForm" name="btnSubmit" type="submit" value="Confirm" tabindex="11" />&nbsp;&nbsp;&nbsp;
+					<input class="buttonsForm" name="btnReset" tabindex="13" type="reset" value="Start again">
+				</div>
+			</form>
+		</div>
+	</header>
+
+	<!-- Gets footer (Contacts, Social Media, and Copyright) -->
+
+	<footer class="footer footer--bg">
+    	<div class="container text-center">
+			<% include ../partials/footer %>
+		</div>
+  	</footer>
+</div>
 </body>
-</html>
+</html>  

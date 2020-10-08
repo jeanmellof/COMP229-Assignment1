@@ -1,25 +1,47 @@
+<!-- 
+Page: Index
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/09/2020
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Gets the head (tab title and CSS) -->
+
 <head>
 	<% title="Home"; %>
 	<% include ../partials/head %>
 </head>
-<body class="container">
 
-	<header>
+<!-- Gets header (navbar and static page) -->
+
+<body>
+<div id="content-wrapper">
+  	<header class="header header--bg">
 		<% include ../partials/header %>
+		
+		<!-- Mission Description -->
+
+		<section class="mission">
+			<div class="container">
+			  <div style="margin-bottom: 90px;" class="page-section">
+				<h2 class="page-section__title">Mission Statement</h2>
+				<img class="page-section__title-style" src="public/assets/images/title-style.png" alt="">
+				<p class="page-section__paragraph">Devote myself to delivering the best level of customer service with a sense of comfort, friendliness, individual confidence, and business spirit.</p>
+			  </div>
+			</div>
+		</section>
 	</header>
 
-	<main>
-		<div class="jumbotron">
-			<h1>Portfolio</h1>
-			<p>Welcome to my life!</p>
-		</div>
-	</main>
+	<!-- Gets footer (Contacts, Social Media, and Copyright) -->
 
-	<footer>
-		<% include ../partials/footer %>
-	</footer>
-	
+	<footer class="footer footer--bg">
+    	<div class="container text-center">
+			<% include ../partials/footer %>
+		</div>
+  	</footer>
+</div>
 </body>
-</html>
+</html>  
