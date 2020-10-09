@@ -39,12 +39,12 @@ app.get('/contact', function(req, res) {
 	res.render('pages/contact');
 });
 
-// active CSS link
+// Access to assets
 app.use('/public', express.static('public'));
 
-// Start Server
+// Start Server -> Command for Heroku or localhost:3000
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server started."));
+
 /*app.listen(3000);
 console.log('3000 is the magic port');*/
-
-app.listen(process.env.PORT || 3000, 
-	() => console.log("Server is running..."));
