@@ -43,5 +43,8 @@ app.get('/contact', function(req, res) {
 app.use('/public', express.static('public'));
 
 // Start Server
-app.listen(3000);
-console.log('3000 is the magic port');
+/*app.listen(3000);
+console.log('3000 is the magic port');*/
+
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
