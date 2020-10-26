@@ -1,0 +1,100 @@
+<!-- 
+Page: Business Contacts
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/23/2020
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Gets the head (tab title and CSS) -->
+
+<head>
+	<% title="Business Contacts"; %>
+	<% include ../partials/head %>
+</head>
+
+<!-- Gets header (navbar and static page) -->
+
+<body>
+	<div id="content-wrapper">
+  		<header class="header header--bg">
+    		<% include ../partials/header %>
+
+			<!-- Business Contacts Description -->
+
+			<div class="container">
+			  <div class="page-section">
+				<h2 id="BC" class="page-section__title">Business Contacts!</h2>
+				<img class="page-section__title-style" src="public/assets/images/title-style.png" alt="">
+				<p class="page-section__paragraph">Here you will find some business contacts!</p>
+			  </div>
+			</div>
+
+	<!-- Table with business contacts! --> 
+
+	<div class="table_center">
+		<div>
+		<button type='button' onclick="addContact();" class='btn_addContact'>Add Contact</button>
+		</div>
+		<table id="contacts">
+			<tr>
+				<th id="table_corner_left">
+					Name
+				</th>
+				<th>
+					Number
+				</th>
+				<th>
+					Email
+				</th>
+				<th style="text-align: center;">
+					Edit
+				</th>
+				<th style="text-align: center;" id="table_corner_right">
+					Delete
+				</th>
+			</tr>
+			<% users.forEach(function(user) { %>
+				<tr>
+					<td>
+						<%= user.name %>
+					</td>
+					<td>
+						<%= user.number %>                     
+					</td>
+					<td>
+						<%= user.email %>
+					</td>
+					<td style="text-align: center;">
+						<!-- <button type='button' onclick="editContact('<%= JSON.stringify(user) %>');" class='btn_action'><img class="flaticon__table" src="public/assets/images/edit.png"></button> -->
+						<button type='button' onclick="editContact('<%= JSON.stringify(user) %>');" class='btn_action'><img class="flaticon__table" src="public/assets/images/edit.png"></button>
+					</td>
+					<td style="text-align: center;">
+						<button type='button' onclick="location.href='/business_contacts/delete/<%= user._id %>';" class='btn_action delete'><img class="flaticon__table" src="public/assets/images/delete.png"></button>
+					</td>
+				</tr>
+			<% }); %>
+		</table>
+		<div class="table_btn_align">
+			<button type='button' onclick="logoutSession();" class='btn_logout'>Log Out</button>
+		</div>
+	</div>
+	<% include ../partials/update %>
+</main>
+
+<!-- Script to update/edit users in db -->
+
+<script src="/public/scripts/update.js"></script>
+
+	<!-- Gets footer (Contacts, Social Media, and Copyright) -->
+
+	<footer class="footer footer--bg">
+    	<div class="container text-center">
+			<% include ../partials/footer %>
+		</div>
+  	</footer>
+</div>
+</body>
+</html>  

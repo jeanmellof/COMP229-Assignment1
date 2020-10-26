@@ -1,0 +1,67 @@
+<!-- 
+Page: Login
+Student Name: Jean M. de Freitas
+Student ID: 301125083
+Date: 10/23/2020
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Gets the head (tab title and CSS) -->
+
+<head>
+	<% title="Login"; %>
+	<% include ../partials/head %>
+</head>
+
+<!-- Gets header (navbar and static page) -->
+
+<body>
+<div id="content-wrapper">
+  	<header class="header header--bg">
+    	<% include ../partials/header %>
+
+			<!-- Login Description -->
+
+			<div class="container">
+			  <div class="page-section">
+				<h2 id="LG" class="page-section__title">Log in!</h2>
+				<img class="page-section__title-style" src="public/assets/images/title-style.png" alt="">
+				<p class="page-section__paragraph">Do log in now to access our contact list!</p>
+			  </div>
+			</div>
+
+		<!-- Form to get in touch with me! -->
+
+		<%- message %>
+		<div class="form__login">
+			<form action="/login" method="post">
+
+				<div class="form_content">
+					<label class="form__label">Login:</label><br>
+					<input class="form__input" name="username" tabindex="1" type="text" required="required" placeholder="username">
+				</div>
+
+				<div class="form_content">
+					<label class="form__label">Password:</label><br>
+					<input class="form__input" name="password" tabindex="3" type="password" required="required" placeholder="password">
+				</div>
+
+				<div class="form__button">
+					<input class="buttonsForm" name="btnSubmit" type="submit" value="Login" tabindex="5" />
+				</div>
+			</form>
+		</div>
+	</header>
+
+	<!-- Gets footer (Contacts, Social Media, and Copyright) -->
+
+	<footer class="footer footer--bg">
+    	<div class="container text-center">
+			<% include ../partials/footer %>
+		</div>
+  	</footer>
+</div>
+</body>
+</html>  
