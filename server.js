@@ -81,7 +81,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Load the Database functions
 
-// 
+// Find contacts 
 findContacts().then(function(items) {
   // "Dummy DB" to received all the contacts/data
   var contacts = items;
@@ -204,7 +204,6 @@ findContacts().then(function(items) {
 
   // login page route
   app.get('/login', function(req, res){
-    //res.render('pages/login', {logged: logged});
     // if not logged it direct to login page
     if(logged == false){
       res.render('pages/login', {logged: logged});
