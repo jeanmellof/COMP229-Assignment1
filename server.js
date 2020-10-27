@@ -105,7 +105,7 @@ findContacts().then(function(items) {
     delete req.session.success;
     res.locals.message = '';
     // if the user wrong the user/pass or try to go direct to 
-    // business contacts page, it will get a error msg
+    // business contacts page, it will get an error msg
     if (err) res.locals.message = '<p class="msg error">' + err + '</p>';
     next();
   });
@@ -204,14 +204,16 @@ findContacts().then(function(items) {
 
   // login page route
   app.get('/login', function(req, res){
+    res.render('pages/login', {logged: logged});
     // if not logged it direct to login page
+    /*
     if(logged == false){
       res.render('pages/login', {logged: logged});
     }
     // if logged it will redirect to business contacts page
     else{
       res.redirect('/business_contacts#BC');
-    }
+    }*/
   });
 
   // Do log in and create the session
