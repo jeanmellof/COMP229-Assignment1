@@ -204,16 +204,14 @@ findContacts().then(function(items) {
 
   // login page route
   app.get('/login', function(req, res){
-    res.render('pages/login', {logged: logged});
     // if not logged it direct to login page
-    /*
     if(logged == false){
       res.render('pages/login', {logged: logged});
     }
     // if logged it will redirect to business contacts page
     else{
       res.redirect('/business_contacts#BC');
-    }*/
+    }
   });
 
   // Do log in and create the session
